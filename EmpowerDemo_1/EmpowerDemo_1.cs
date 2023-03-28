@@ -55,6 +55,7 @@ namespace EmpowerDemo_1
 	using System.Collections.Generic;
 	using System.Globalization;
 	using System.Text;
+	using Empower.Library.Room3;
 	using Skyline.DataMiner.Automation;
 	
 	/// <summary>
@@ -68,7 +69,8 @@ namespace EmpowerDemo_1
 		/// <param name="engine">Link with SLAutomation process.</param>
 		public void Run(IEngine engine)
 		{
-			engine.GenerateInformation("Hello World");
+			var order = OrderFactory.CreateOrder("Order 1");
+			order.Dispatch("help");
 		}
 	}
 }
